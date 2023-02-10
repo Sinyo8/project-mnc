@@ -1,0 +1,31 @@
+@media only screen and (max-width : 830px) {
+ .navbar .nav-link .nav-list{
+    display: none;
+ }
+  .navbar .box-toggle{
+    display: block;
+  }
+  .navbar .box-toggle .toggle{
+    height: 50px;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    flex-direction: column;
+    border: solid 3px var(--blue-color);
+    box-shadow: 2px 1px 3px var(--blue-color);
+    cursor: pointer;
+}  
+    .navbar .box-toggle .toggle span{
+        width: 26px;
+        height: 3px;
+        background-color: var(--blue-color);
+    }
+    .navbar .box-toggle .toggle span:nth-child(1){
+        transform: translateY(-5px);
+    }
+    .navbar .box-toggle .toggle span:nth-child(3){
+        transform: translateY(5px);
+    }
+}

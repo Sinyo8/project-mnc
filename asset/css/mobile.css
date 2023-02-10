@@ -1,0 +1,10 @@
+@media only screen and (max-width: 500px) {
+    /* navbar */
+
+    
+ 
+ 
+    .main .chat-text h1{
+        font-size: 1.3em;
+    }
+}

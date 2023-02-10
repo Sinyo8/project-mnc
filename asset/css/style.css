@@ -1,0 +1,237 @@
+@font-face {
+    font-family: "Montserat-Light";
+    src: url("../font/Montserrat/static/Montserrat-Light.ttf");
+}
+@font-face {
+    font-family: "Montserat-Regular";
+    src: url("../font/Montserrat/static/Montserrat-Regular.ttf");
+}
+
+*,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserat-Regular";
+}
+
+:root{
+    --primary-color : #F33232;
+    --secondary-color : #F6ED11;
+    --blue-color : #448CF9;
+    --bg-color : #68A1F6;
+    --text-color: #333;
+}
+
+.navbar{
+    max-width: 100vw;
+}
+
+.navbar .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 2em;
+    width: calc(100% - 4em);
+}
+.navbar .header{
+    width: 100%;
+    height: 5px;
+    background-color: #F6ED11;
+    position: relative;
+}
+
+.navbar .header::before{
+    content: '';
+    height: 5px;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    transform: translateY(80px);
+}
+
+.navbar .container .navbar-brand{
+    margin-top: 10px;
+    position: relative;
+}
+
+.navbar .box-toggle{
+    display: none;
+}
+
+.navbar .container .nav-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.navbar .container .nav-link li{
+    list-style: none;
+    padding: 20px;
+}
+.navbar .container .nav-link .nav-list{
+    text-decoration: none;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar .nav-link .nav-list:hover{
+    color: var(--blue-color);
+    border-bottom: dashed 3px var(--secondary-color);
+}
+
+/* actvie */
+
+.navbar .nav-link .nav-list.active{
+    color: var(--blue-color);
+}
+
+
+/* main */
+.main{
+    width: 100%;
+}
+
+.main .container{
+    max-width: 100%;
+    width: calc(100vw - 4em);
+    display: flex;
+    height: 450px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    position: relative;
+}
+
+.main .img-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.main .img-slide img{
+    margin: 0px 30px;
+    border-radius: 25px;
+}
+
+.main .container .box-btn{
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main .container .box-btn img{
+    width: 50px;
+    height: 50px;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+/* query */
+
+.main .chat-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    flex-direction: column;
+}
+
+.main .chat-text h1{
+    text-transform: uppercase;
+    color: var(--blue-color);
+}
+.main .chat-text h4{
+    padding: 15px;
+    border-bottom: solid 3px rgba(0,0,0,0.5);
+}
+.main .chat-text h4 b{
+    color: var(--primary-color);
+}
+
+.main .section-1{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+    color: #fff;
+}
+
+.main .section-1 .box-promo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 250px;
+    height: 200px;
+    background-color: var(--blue-color);
+    margin: 15px 25px;
+    border-radius: 25px;
+    position: relative;
+    box-shadow: 7px 10px 17px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: 7px 10px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 7px 10px 17px 0px rgba(0,0,0,0.75);
+}
+
+.main .section-1 .box-promo::before{
+    content: '';
+    width: 100%;
+    height: 25%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    top: 0px;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+}
+.main .section-1 .box-promo::after{
+    content: '';
+    width: 100%;
+    height: 25%;
+    background-color: var(--primary-color);
+    position: absolute;
+    bottom: 0px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.main .section-1 .box-promo h1{
+    position: relative;
+    z-index: 10;
+    color: var(--text-color);
+    letter-spacing: 3px;
+}
+
+.main .section-1 .box-info h4{
+    font-size: 1.3em;
+    letter-spacing: 1px;
+    padding: 3px 0px;
+}
+
+.main .section-1 .box-btn{
+    cursor: pointer;
+}
+.main .section-1 .box-btn a{
+    position: relative;
+    z-index: 10;
+    color: var(--text-color);
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-size: 1.5em;
+}
+
+.main .section-1 .box-btn a:hover{
+    color: #fff;
+}
+
