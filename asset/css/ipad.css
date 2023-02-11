@@ -2,9 +2,30 @@
  .navbar .nav-link .nav-list{
     display: none;
  }
-  .navbar .box-toggle{
+ .navbar .container.active .nav-link{
+    position: absolute;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+ }
+ .navbar .container.active .nav-link li{
+    position: relative;
+    z-index: 11;
+ }
+ .navbar .container.active .nav-link .nav-list{
     display: block;
-  }
+    position: relative;
+    z-index: 11;
+}
+
+ .navbar .container .box-toggle {
+    display: block;
+}
+
   .navbar .box-toggle .toggle{
     height: 50px;
     width: 50px;
@@ -16,16 +37,62 @@
     border: solid 3px var(--blue-color);
     box-shadow: 2px 1px 3px var(--blue-color);
     cursor: pointer;
+    position: relative;
+    transition: all 1s ease-in;
 }  
     .navbar .box-toggle .toggle span{
-        width: 26px;
+        width: 28px;
         height: 3px;
         background-color: var(--blue-color);
+        transition: all 1s ease-in-out;
+    }
+    .navbar .container.active .box-toggle .toggle span{
+        position: relative;
+        z-index: 50;
     }
     .navbar .box-toggle .toggle span:nth-child(1){
         transform: translateY(-5px);
     }
+    .navbar .container.active .box-toggle .toggle span:nth-child(1){
+        rotate: -45deg;
+        transform: translateY(0px);
+        transform-origin: 6%,5%;
+    }
+    .navbar .container.active .box-toggle .toggle span:nth-child(2){
+        display: none;
+    }
+    .navbar .container.active .box-toggle .toggle span:nth-child(3){
+        rotate: 45deg;
+        transform: translate(-1px,-1px);
+        transform-origin: 0%,0%;
+    }
     .navbar .box-toggle .toggle span:nth-child(3){
         transform: translateY(5px);
     }
+
+    /* active toggle*/
+    .navbar .container.active{
+        width: auto;
+    }
+    .navbar .container.active .box-toggle{
+        display: block;
+        position: absolute;
+        height: 100vh;
+        background-color: var(--secondary-color);
+        width: 100vw;
+        z-index: 10;
+    }
+
+      .navbar .container.active .box-toggle .toggle{
+        position: absolute;
+        right: 50px;
+        margin: 10px 10px;
+        z-index: 50;
+    }
+
+      /* active container navbar */
+
+      .navbar .container.active{
+        align-items: flex-start;
+      }
 }
